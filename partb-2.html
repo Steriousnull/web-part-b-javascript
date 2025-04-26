@@ -1,0 +1,33 @@
+<html>
+<head>
+<script>
+function Prime() 
+{
+    var i, flag = 0, number;
+    number = document.getElementById("N").value;
+    number = parseInt(number);
+    for(i = 2; i <= number / 2; i++)
+    {
+        if(number % i == 0)
+        {
+            flag = 1;
+            break;
+        }
+    }
+    if(flag == 0 && number > 1)
+    {
+        window.alert("Prime number");
+    }
+    else
+    {
+        window.alert("Not a Prime number");
+    }
+}
+</script>
+</head>
+<body>
+<br>
+Enter Number : <input type="text" name="n" id="N"/>
+<button onClick="Prime()">submit</button>
+</body>
+</html>
